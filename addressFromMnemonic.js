@@ -1,14 +1,14 @@
 import { Wallet, providers } from "ethers";
 import rpcs from './rpcs.json' assert {type: 'json'}
 
-/**
- * @dev private key without 2 first characters "0x"
- */
-const privateKey = '___PrivateKey___'
+const mnemonic = '___Mnemonic___'
 const provider = new providers.JsonRpcBatchProvider(rpcs.test.url)
-const wallet = new Wallet(privateKey, provider)
+
+const walletFromMnemonic = Wallet.fromMnemonic(mnemonic)
+const wallet = new Wallet(walletFromMnemonic.privateKey, provider);
 
 console.log('network', await provider.getNetwork())
-console.log('privateKey', privateKey)
+console.log('mnemonic', mnemonic)
+console.log('privateKey', walletFromMnemonic.privateKey)
 console.log('address', wallet.address)
 
