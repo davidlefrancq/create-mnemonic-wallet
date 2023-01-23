@@ -10,7 +10,7 @@ const privateKey = process.env.PRIVATE_KEY
 const provider = new providers.JsonRpcBatchProvider(rpcs.test.url)
 const wallet = new Wallet(privateKey, provider)
 
-console.log('network', await provider.getNetwork())
-console.log('privateKey', privateKey)
-console.log('address', wallet.address)
+console.log('🖧 network    : ', await provider.getNetwork())
+console.log('🔑 privateKey : ', privateKey)
+console.log('#️⃣  address    : ', wallet.address)
 

@@ -8,6 +8,6 @@ import { Wallet } from "ethers";
 const privateKey = process.env.PRIVATE_KEY
 const wallet = new Wallet(privateKey)
 
-console.log('privateKey', privateKey)
-console.log('address', wallet.address)
+console.log('🔑 privateKey : ', privateKey)
+console.log('#️⃣  address    : ', wallet.address)
 
