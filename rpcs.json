@@ -1,8 +1,0 @@
-{
-  "main":{
-    "url": "https://rpc.ankr.com/eth"
-  },
-  "test":{
-    "url": "https://rpc.ankr.com/polygon_mumbai"
-  }
-}
